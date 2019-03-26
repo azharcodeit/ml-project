@@ -1,12 +1,12 @@
-**Good Day!
+Good Day!
 
-**This is a guide to launch an app.
+This is a guide to launch an app.
 
-**First, you should unzip a file and go to the directory of a file and open cmd.
+First, you should unzip a file and go to the directory of a file and open cmd.
 
-**In cmd, firstly we recommend you to download dependencies, libraries that are used in app.py file.
+In cmd, firstly we recommend you to download dependencies, libraries that are used in app.py file.
 
-**For example, write commands:
+For example, write commands:
 
 1. pip3 install Flask
 2. pip3 install Flask flask-bootstrap
