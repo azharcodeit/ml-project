@@ -1,4 +1,4 @@
-**Good Day!
+Good Day!
 
 This is a guide to launch an app.
 
