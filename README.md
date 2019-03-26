@@ -1,10 +1,12 @@
 Good Day!
 
-This is a guide to launch an app.
+This is a Machine Learning Web application that does sentiment analysis of a text.
+
+A guide to launch an app:
 
 First, you should unzip a file and go to the directory of a file and open cmd.
 
-In cmd, firstly we recommend you to download dependencies, libraries that are used in app.py file.
+In cmd, firstly I recommend you to download dependencies, libraries that are used in app.py file.
 
 For example, write commands:
 
@@ -13,6 +15,7 @@ For example, write commands:
 
 Finally, launch python file by command:
 python app.py (if python3 is natively used in your PC).
+then go to the http://127.0.0.1:5000/
 
 Thank you for using!
 
