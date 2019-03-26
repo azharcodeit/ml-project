@@ -1,0 +1,89 @@
+{% extends "bootstrap/base.html" %}
+
+{% block content %}
+
+<style type="text/css">
+		body{
+	font:15px/1.5  montserrat,sans-serif;
+}
+		.spinner-1:before{
+			content: "";
+			box-sizing: border-box;
+			position: absolute;
+			top:50%;
+			left: 50%;
+			height: 60px;
+			width: 60px;
+			margin-top: -30px;
+			margin-left: -30px;
+			border-radius: 50%;
+			border:6px solid transparent;
+			border-top-color: #0091EA;
+			animation: spinner 0.7s linear infinite;
+		}
+		@keyframes spinner {
+			to {
+				transform: rotate(360deg);
+			}
+		}
+		li { background-color:#000000; }
+		li:nth-child(odd) { background-color:#0091EA; }
+
+		</style>
+
+
+<div class="container", style="background-color:white">
+	<div class="jumbotron text-center", style="background-color:lightblue">
+		<h3>SENTIMENT ANALYSIS APP</h3>
+		<p>analyse a word in russian</p>
+	</div>
+</div>
+
+<div class="container">
+	<form method="POST" action="{{ url_for('analyse')}}" id="myForm">
+		
+
+		<label >Что хотели проанализировать?</label>
+    <textarea class="form-control" rows="3" cols="2" name="rawtext"></textarea>
+    <br>
+
+    <input type="submit" onclick="myAnalyser()" value="Анализ" class="btn btn-primary ">
+    <input type="button" onclick="myFunction()" value="Очистить" class="btn btn-outline-dark">
+
+    <a href="{{ url_for('index')}}" type="button" class="btn btn-danger" > Обновить</a>
+    
+	</form>
+	
+</div>
+<br/>
+<hr/>
+<div class="main">
+<div class="container">
+	<div class="card">
+  
+  <div class="card-body">
+    
+    <div class="card-text"> 
+    	<h5>Ваш запрос</h5>
+    	<p style="color:#0091EA;font-family:sans-serif;">{{ received_text }}</p>
+    	<hr/>
+<br/>
+    <p>Тональность :</p>
+    {% for i in summary %}
+    <ul class="list-group ">
+    	<li class="list-group-item list-group-item-info"><span style="color:white">{{i}}</span>
+    		
+    	</li>
+    </ul>
+	
+
+	{% endfor %}
+  </div>
+  
+
+	
+</div>
+</div>
+
+
+{% endblock %}
